@@ -96,6 +96,24 @@ export default class AudioTool {
    */
   static get tunes() {
     return [
+      {
+        name: 'stretched',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 641 640"><path fill="#5C6B7A" fill-rule="nonzero" d="M1 160h640v320H1V160Zm120-80h400v20H121V80Zm0 460h400v20H121v-20Z"/></svg>`,
+        title: 'Stretch audio',
+        toggle: true,
+      },
+      {
+        name: 'withBackground',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 641 640"><path fill="#5C6B7A" fill-rule="nonzero" d="M181 200h280v240H181V200ZM81 120h480v20H81v-20Zm0 380h480v20H81v-20Z"/></svg>`,
+        title: 'With background',
+        toggle: true,
+      },
+      {
+        name: 'withBorder',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 641 640"><rect width="512" height="409" x="64" y="115" fill="none" fill-rule="evenodd" stroke="#5C6B7A" stroke-linecap="round" stroke-width="34" rx="40"/></svg>`,
+        title: 'With border',
+        toggle: true,
+      },
     ];
   }
 
