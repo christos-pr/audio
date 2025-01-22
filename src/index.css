@@ -41,6 +41,10 @@
         box-sizing: border-box;
       }
     }
+
+    &-title {
+      font-size: 14px;
+    }
   }
 
   &__caption {
@@ -77,14 +81,14 @@
   }
 
   &--empty {
-    ^&__audio {
+    & &__audio {
       display: none;
     }
   }
 
   &--empty,
   &--loading {
-    ^&__caption {
+    & &__caption {
       display: none;
     }
   }
@@ -128,7 +132,7 @@
       display: none;
     }
 
-    ^&__audio {
+    & &__audio {
       &-preloader {
         display: none;
       }
@@ -136,7 +140,7 @@
   }
 
   &--loading {
-    ^&__audio {
+    & &__audio {
       min-height: 200px;
       display: flex;
       border: 1px solid var(--border-color);
@@ -158,13 +162,13 @@
    */
 
   &--withBorder {
-    ^&__audio-picture {
+    & &__audio-picture {
       border: 1px solid var(--border-color);
     }
   }
 
   &--withBackground {
-    ^&__audio {
+    & &__audio {
       padding: 24px;
       background: var(--bg-color);
 
@@ -176,7 +180,7 @@
   }
 
   &--stretched {
-    ^&__audio {
+    & &__audio {
       margin-left: -56px;
       margin-right: -56px;
 
