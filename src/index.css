@@ -4,8 +4,6 @@
   --border-color: #d3dce6;
 
   &__audio {
-    border-radius: 3px;
-    overflow: hidden;
     margin-bottom: 8px;
 
     &-element {
@@ -44,6 +42,7 @@
 
     &-title {
       font-size: 14px;
+      display: block;
     }
   }
 
@@ -162,17 +161,19 @@
    */
 
   &--withBorder {
-    & &__audio-picture {
+    ^&__audio-element {
       border: 1px solid var(--border-color);
+      border-radius: 100px;
     }
   }
 
   &--withBackground {
-    & &__audio {
+    ^&__audio {
       padding: 24px;
       background: var(--bg-color);
 
-      &-picture {
+      &-element,
+      &-title {
         max-width: 80%;
         margin: 0 auto;
       }
@@ -180,7 +181,7 @@
   }
 
   &--stretched {
-    & &__audio {
+    ^&__audio {
       margin-left: -56px;
       margin-right: -56px;
 
