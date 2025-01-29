@@ -80,14 +80,14 @@
   }
 
   &--empty {
-    & &__audio {
+    ˆ&__audio {
       display: none;
     }
   }
 
   &--empty,
   &--loading {
-    & &__caption {
+    ˆ&__caption {
       display: none;
     }
   }
@@ -131,7 +131,7 @@
       display: none;
     }
 
-    & &__audio {
+    ˆ&__audio {
       &-preloader {
         display: none;
       }
@@ -139,7 +139,7 @@
   }
 
   &--loading {
-    & &__audio {
+    ˆ&__audio {
       min-height: 200px;
       display: flex;
       border: 1px solid var(--border-color);
