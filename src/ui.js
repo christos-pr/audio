@@ -66,7 +66,7 @@ export default class Ui {
       wrapper: 'audio-tool',
       audioContainer: 'audio-tool__audio',
       audioPreloader: 'audio-tool__audio-preloader',
-      audioTitle: 'embed-tool__audio-title',
+      audioTitle: 'audio-tool__audio-title',
       audioElement: 'audio-tool__audio-element',
       caption: 'audio-tool__caption',
     };
@@ -91,7 +91,7 @@ export default class Ui {
   /**
    * Renders tool UI
    *
-   * @param {AudioeToolData} toolData - saved tool data
+   * @param {AudioToolData} toolData - saved tool data
    * @returns {Element}
    */
   render(toolData) {
@@ -112,7 +112,7 @@ export default class Ui {
   createFileButton() {
     const button = make('div', [ this.CSS.button ]);
 
-    button.innerHTML = this.config.buttonContent || `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#5C6B7A" fill-rule="nonzero" d="M20 17.778V2.222A2.222 2.222 0 0 0 17.778 0H2.222A2.222 2.222 0 0 0 0 2.222v15.556C0 19.006.994 20 2.222 20h15.556A2.222 2.222 0 0 0 20 17.778ZM6.111 11.667l2.778 3.339L12.778 10l5 6.667H2.222l3.89-5Z"/></svg> ${this.api.i18n.t('Click to select an audio file...')}`;
+    button.innerHTML = this.config.buttonContent || `<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.412 1.71V18.21a.715.715 0 0 1-.337.62.69.69 0 0 1-.776-.049l-5.651-4.396a.345.345 0 0 1-.131-.272V5.812c0-.106.05-.206.133-.271l5.652-4.397a.69.69 0 0 1 .862.014c.16.138.252.34.248.552Zm-8.62 4.116H1.38A1.38 1.38 0 0 0 0 7.205v5.517c0 .761.617 1.379 1.38 1.379h2.413c.19 0 .344-.155.344-.345V6.17a.345.345 0 0 0-.344-.345ZM14.72 7.622a.69.69 0 0 0-.062.974 2.069 2.069 0 0 1 0 2.734.69.69 0 1 0 1.034.912 3.448 3.448 0 0 0 0-4.558.69.69 0 0 0-.975-.062h.003Zm3.524-2.256a.69.69 0 1 0-1.027.92 5.517 5.517 0 0 1 0 7.355.69.69 0 1 0 1.027.92 6.896 6.896 0 0 0 0-9.195Z" fill="#5C6B7A" fill-rule="nonzero"/></svg> ${this.api.i18n.t('Click to select an audio file...')}`;
 
     button.addEventListener('click', () => {
       this.onSelectFile();
@@ -146,7 +146,7 @@ export default class Ui {
   /**
    * Shows audio
    *
-   * @param {Object} file - audio source
+   * @param {object} file - audio source
    * @returns {void}
    */
   fillAudio(file) {
@@ -158,7 +158,7 @@ export default class Ui {
       muted: false,
     };
 
-    let eventName = 'loadeddata';
+    const eventName = 'loadeddata';
 
     /**
      * Compose tag with defined attributes
@@ -180,8 +180,8 @@ export default class Ui {
         this.nodes.audioPreloader.style.backgroundImage = '';
       }
     });
-    this.nodes.audioContainer.appendChild(this.nodes.audioTitle);
     this.nodes.audioContainer.appendChild(this.nodes.audioElement);
+    this.nodes.audioContainer.appendChild(this.nodes.audioTitle);
   }
 
   /**
