@@ -148,7 +148,7 @@ export default class AudioTool {
      * Module for file uploading
      */
     this.uploader = new Uploader({
-      config: this.config
+      config: this.config,
     });
 
     /**

@@ -91,7 +91,7 @@ export default class Ui {
   /**
    * Renders tool UI
    *
-   * @param {AudioeToolData} toolData - saved tool data
+   * @param {AudioToolData} toolData - saved tool data
    * @returns {Element}
    */
   render(toolData) {
@@ -146,7 +146,7 @@ export default class Ui {
   /**
    * Shows audio
    *
-   * @param {Object} file - audio source
+   * @param {object} file - audio source
    * @returns {void}
    */
   fillAudio(file) {
@@ -158,7 +158,7 @@ export default class Ui {
       muted: false,
     };
 
-    let eventName = 'loadeddata';
+    const eventName = 'loadeddata';
 
     /**
      * Compose tag with defined attributes
