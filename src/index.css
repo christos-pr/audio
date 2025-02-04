@@ -165,6 +165,16 @@
       border: 1px solid var(--border-color);
       border-radius: 100px;
     }
+
+    &.audio-tool--withBackground {
+      .audio-tool__audio {
+        border: 1px solid var(--border-color);
+      }
+
+      .audio-tool__audio-element {
+        border: none;
+      }
+    }
   }
 
   &--withBackground {
